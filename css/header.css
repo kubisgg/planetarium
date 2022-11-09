@@ -1,0 +1,42 @@
+#header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 5px;
+    background-color: white;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    width: 95%;
+}
+
+div.login-buttons {
+    /* margin-bottom: 10px; */
+    background-color: yellow;
+    /* height: 50px; */
+}
+
+/* Przycisk do logowania */
+
+.login-button {
+    background-color: #383838;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    width: auto;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-button:hover {
+    background-color: #535353;
+    transition: 0.2s;
+}
