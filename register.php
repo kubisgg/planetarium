@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Planetarium - Strona Główna</title>
+    <title>Planetarium - Rejestracja</title>
 
     <link rel="stylesheet" href="/planetarium/css/style.css" class="stylesheet">
 
@@ -25,22 +25,26 @@
 
     <div id="container">
 
-        <div class="quote">
-            <h2>Głodująca armia jest gorsza, niż brak armii.</h2>
-            <p style="text-align:end;">~ Napoleon Bonaparte</p>
-        </div>
+    <!-- TODO: alerte z JS gdy nic nie bedzie w srodku inputow -->
+    <!-- TODO: skypt rejestracji w register_script.php -->
 
-        <div class="panels">
+        <div class="login-form">
 
-            <div class="panel-left">
-                <p class="info-text">Ilość ciał niebieskich:</p>
-                <p class="number">0</p>
-            </div>
+            <form action="/planetarium/auth/register_script.php" method="POST">
 
-            <div class="panel-right">
-                <p class="info-text">Nowi użytkownicy:</p>
-                <p class="number">0</p>
-            </div>
+                <input class="login-form" type="text" name="login-form" placeholder="Nazwa użytkownika" required>
+
+                <input class="login-form" type="password" name="password-form" placeholder="Hasło" required>
+
+                <input class="login-form" type="email" name="email-form" placeholder="E-mail" required>
+
+                <input class="login-form" type="text" name="institute-form" placeholder="Instytut" required>
+                <br />
+
+                <input type="submit" class="nav-button" value="Zarejestruj się">
+
+                <p>Masz już konto? <a href="login.php">Zaloguj się</a></p>
+            </form>
 
         </div>
 

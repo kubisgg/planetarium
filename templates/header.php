@@ -1,15 +1,18 @@
-<div id="header">
+<link rel="stylesheet" href="/planetarium/css/header.css" class="stylesheet">
+<header>
 
-    <h1>Planetarium</h1>
+    <h1 class="title">Planetarium</h1>
 
-    <div class="login-buttons">
+    <nav>
 
-        <a href="login.php"><button class="login-button"><i class="fa-solid fa-right-to-bracket"></i> Zaloguj</button></a>
+        <div class="nav-buttons">
 
-        <a href="register.php"><button class="login-button"><i class="fa-solid fa-clipboard-check"></i> Zarejestruj</button></a>
+            <a href="login.php"><button class="nav-button"><i class="fa-solid fa-right-to-bracket"></i> Zaloguj</button></a>
 
-    </div>
+            <a href="register.php"><button class="nav-button"><i class="fa-solid fa-clipboard-check"></i> Zarejestruj</button></a>
 
-    <!-- <p>asd</p> -->
+        </div>
 
-</div>
+    </nav>
+
+</header>
