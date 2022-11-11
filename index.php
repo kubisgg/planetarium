@@ -20,6 +20,7 @@
 </head>
 <body>
 
+    <!-- test -->
     <!-- Importowanie Headera -->
     <?php require 'templates/header.php' ?>
 
