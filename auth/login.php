@@ -18,10 +18,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 </head>
+
+<script>
+
+    function validate_form() {
+        let username = document.forms['login-form']['username-form'].value
+        let password = document.forms['login-form']['password-form'].value
+
+        if(username == '' || password == '') {
+            alert('Wszystkie pola muszą być wypełnione')
+            return false
+        }
+    }
+
+</script>
+
 <body>
 
     <!-- Importowanie Headera -->
-    <?php require 'templates/header.php' ?>
+    <?php require '../templates/header.php' ?>
 
     <div id="container">
 
@@ -30,14 +45,20 @@
 
         <div class="login-form">
 
-            <form action="/planetarium/auth/login_script.php" method="POST">
+            <form onsubmit="return validate_form()" action="/planetarium/auth/login_script.php" method="POST" name="login-form">
 
-                <input class="login-form" type="text" name="login-form" placeholder="Nazwa użytkownika" required>
+                <input class="login-form" type="text" name="username-form" placeholder="Nazwa użytkownika" required>
 
                 <input class="login-form" type="password" name="password-form" placeholder="Hasło" required>
                 <br />
 
                 <input type="submit" class="nav-button" value="Zaloguj się">
+
+                <?php session_start();
+                    if(isset($_SESSION['login-error'])) {
+                        echo '<br />' . $_SESSION['login-error'];
+                    }
+                ?>
 
                 <p>Nie masz konta? <a href="register.php">Kliknij tutaj</a></p>
 
@@ -48,7 +69,7 @@
     </div>
 
     <!-- Importowanie Footera -->
-    <?php require 'templates/footer.php' ?>
+    <?php require '../templates/footer.php' ?>
 
 </body>
 </html>

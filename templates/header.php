@@ -7,9 +7,9 @@
 
         <div class="nav-buttons">
 
-            <a href="login.php"><button class="nav-button"><i class="fa-solid fa-right-to-bracket"></i> Zaloguj</button></a>
+            <a href="/planetarium/auth/login.php"><button class="nav-button"><i class="fa-solid fa-right-to-bracket"></i> Zaloguj</button></a>
 
-            <a href="register.php"><button class="nav-button"><i class="fa-solid fa-clipboard-check"></i> Zarejestruj</button></a>
+            <a href="/planetarium/auth/register.php"><button class="nav-button"><i class="fa-solid fa-clipboard-check"></i> Zarejestruj</button></a>
 
         </div>
 

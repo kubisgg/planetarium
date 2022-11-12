@@ -18,21 +18,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 </head>
+
+<script>
+
+    function validate_form() {
+        let username = document.forms['register-form']['username-form'].value
+        let password = document.forms['register-form']['password-form'].value
+        let email = document.forms['register-form']['email-form'].value
+        let institute = document.forms['register-form']['institute-form'].value
+
+        if(username == '' || password == '' || email == '' || institute == '') {
+            alert('Wszystkie pola muszą być wypełnione')
+            return false
+        }
+    }
+
+</script>
+
 <body>
 
     <!-- Importowanie Headera -->
-    <?php require 'templates/header.php' ?>
+    <?php require '../templates/header.php' ?>
 
     <div id="container">
 
-    <!-- TODO: alerte z JS gdy nic nie bedzie w srodku inputow -->
-    <!-- TODO: skypt rejestracji w register_script.php -->
-
         <div class="login-form">
 
-            <form action="/planetarium/auth/register_script.php" method="POST">
+            <form onsubmit="return validate_form()" action="/planetarium/auth/register_script.php" method="POST" name="register-form">
 
-                <input class="login-form" type="text" name="login-form" placeholder="Nazwa użytkownika" required>
+                <input class="login-form" type="text" name="username-form" placeholder="Nazwa użytkownika" required>
 
                 <input class="login-form" type="password" name="password-form" placeholder="Hasło" required>
 
@@ -43,6 +57,12 @@
 
                 <input type="submit" class="nav-button" value="Zarejestruj się">
 
+                <?php session_start();
+                    if(isset($_SESSION['register-error'])) {
+                        echo '<br />' . $_SESSION['register-error'];
+                    }
+                ?>
+
                 <p>Masz już konto? <a href="login.php">Zaloguj się</a></p>
             </form>
 
@@ -51,7 +71,7 @@
     </div>
 
     <!-- Importowanie Footera -->
-    <?php require 'templates/footer.php' ?>
+    <?php require '../templates//footer.php' ?>
 
 </body>
 </html>
