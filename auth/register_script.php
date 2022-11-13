@@ -16,6 +16,7 @@
         if($username == '' or $pass == '' or $email == '' or $institute == '') {
             $_SESSION['register-error'] = '<span style="color: red;">Dane w polach nie mogą być puste.</span>';
             header('Location: register.php');
+            exit();
         }
     }
 
@@ -30,6 +31,7 @@
         if($row['login'] == $username) {
             $_SESSION['register-error'] = '<span style="color: red;">Użytkownik o podanej nazwie już istnieje!</span>';
             header('Location: register.php');
+            exit();
         }
     }
 
