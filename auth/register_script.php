@@ -12,6 +12,7 @@
     if(!isset($username) ||!isset($pass) || !isset($email) || !isset($institute)) {
         $_SESSION['register-error'] = '<span style="color: red;">Musisz wpisać dane do pól.</span>';
         header('Location: register.php');
+        exit();
     } else {
         if($username == '' or $pass == '' or $email == '' or $institute == '') {
             $_SESSION['register-error'] = '<span style="color: red;">Dane w polach nie mogą być puste.</span>';
@@ -20,12 +21,10 @@
         }
     }
 
-    // Sprawdzanie czy uzytkownik jest w bazie
+    // Sprawdzanie czy istnieje juz uzytkownik o podanym loginie
 
     $query = "SELECT login FROM `users` WHERE login = '$username'";
     $result = mysqli_query($conn, $query) or die();
-
-    // Sprawdzanie czy istnieje juz uzytkownik o podanym loginie
 
     while($row = mysqli_fetch_assoc($result)) {
         if($row['login'] == $username) {
