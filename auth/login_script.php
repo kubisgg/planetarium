@@ -1,8 +1,5 @@
 <?php
 
-    // TODO: sprawdzanie czy wszystkie pola z formularza zostaly wypelnione poprwanie
-    // TODO: sprawdzanie czy taki user istnieje w bazie
-
     require '../utils/db_connect.php';
 
     $username = $_POST['username-form'];
@@ -29,23 +26,28 @@
 
     if(mysqli_fetch_assoc($result)) {
 
+        // Sprawdzanie czy dane logowania sa poprawne
+
         $pass = hash('sha256', $pass);
 
         $query = "SELECT * FROM `users` WHERE login = '$username' AND password ='$pass'";
         $result = mysqli_query($conn, $query) or die();
 
         if(mysqli_num_rows(@$result) != 1) {
+
+            // Przekierowanie z informacja, ze haslo jest niepoprawne
+
             $_SESSION['login-error'] = '<span style="color: red;">Podane hasło nie jest poprawne.</span>';
             header('Location: login.php');
             exit();
         } else {
+
+            // Zapisanie danych do zmiennych sesji
+
             $row = mysqli_fetch_assoc($result);
 
+            $_SESSION['id'] = $row['id'];
             $_SESSION['username'] = $username;
-            $_SESSION['email'] = $row['email'];
-            $_SESSION['role'] = $row['role'];
-            $_SESSION['create_date'] = $row['create_date'];
-            $_SESSION['institution'] = $row['institution'];
 
             header('Location: ../index.php');
             exit();
