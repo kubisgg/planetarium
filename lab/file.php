@@ -1,0 +1,1 @@
+<!-- plik stworzony po to, aby github nie usuwal folderu lab -->
