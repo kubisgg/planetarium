@@ -7,7 +7,7 @@
 
     <title>Planetarium - Logowanie</title>
 
-    <link rel="stylesheet" href="/planetarium/css/style.css" class="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" class="stylesheet">
 
     <!-- Font Awesome 6.2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -40,9 +40,6 @@
 
     <div id="container">
 
-    <!-- TODO: alert z JS gdy nic nie bedzie w srodku inputow -->
-    <!-- TODO: skypt logowania w login_script.php -->
-
         <div class="login-form">
 
             <form onsubmit="return validate_form()" action="/planetarium/auth/login_script.php" method="POST" name="login-form">
@@ -57,10 +54,11 @@
                 <?php session_start();
                     if(isset($_SESSION['login-error'])) {
                         echo '<br />' . $_SESSION['login-error'];
+                        unset($_SESSION['login-error']);
                     }
                 ?>
 
-                <p>Nie masz konta? <a href="register.php">Kliknij tutaj</a></p>
+                <p>Nie masz konta? <a href="register.php">Zarejestruj się</a></p>
 
             </form>
 

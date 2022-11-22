@@ -7,7 +7,7 @@
 
     <title>Planetarium - Rejestracja</title>
 
-    <link rel="stylesheet" href="/planetarium/css/style.css" class="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" class="stylesheet">
 
     <!-- Font Awesome 6.2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -60,6 +60,7 @@
                 <?php session_start();
                     if(isset($_SESSION['register-error'])) {
                         echo '<br />' . $_SESSION['register-error'];
+                        unset($_SESSION['register-error']);
                     }
                 ?>
 
