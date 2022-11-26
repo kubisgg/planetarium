@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Planetarium - Strona Główna</title>
+    <title>Planetarium - Lab</title>
 
     <link rel="stylesheet" href="/planetarium/css/style.css" class="stylesheet">
 
@@ -22,14 +22,13 @@
 <body>
 
     <!-- Importowanie Headera -->
-    <?php require 'templates/header.php' ?>
+    <?php require '../templates/header.php' ?>
 
     <div id="container">
 
         <div class="quote">
-            <?php require 'utils/get_quote.php' ?>
-            <h2><?php echo $_SESSION['quote-content'] ?></h2>
-            <p style="text-align:end;">~ <?php echo $_SESSION['quote-author'] ?></p>
+            <h2>lab</h2>
+            <p style="text-align:end;">~ Napoleon Bonaparte</p>
         </div>
 
         <div class="panels">
@@ -49,7 +48,7 @@
     </div>
 
     <!-- Importowanie Footera -->
-    <?php require 'templates/footer.php' ?>
+    <?php require '../templates/footer.php' ?>
 
 </body>
 </html>
