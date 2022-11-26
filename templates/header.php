@@ -24,11 +24,13 @@
 
             <?php
             if($logged_in) {
+
                 echo '<a href="/planetarium/index.php"><button class="nav-button"><i class="fa-solid fa-house"></i> Strona główna</button></a>';
 
                 echo '<a href="/planetarium/auth/logout.php"><button class="nav-button"><i class="fa-solid fa-right-from-bracket"></i> Wyloguj</button></a>';
 
             } else {
+
                 echo '<a href="/planetarium/auth/login.php"><button class="nav-button"><i class="fa-solid fa-right-to-bracket"></i> Zaloguj</button></a>';
 
                 echo '<a href="/planetarium/auth/register.php"><button class="nav-button"><i class="fa-solid fa-clipboard-check"></i> Zarejestruj</button></a>';
