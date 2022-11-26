@@ -35,6 +35,7 @@
         <div class="nav-buttons">
 
             <?php
+
             if($logged_in) {
 
                 echo '<a href="/planetarium/index.php"><button class="nav-button"><i class="fa-solid fa-house"></i> Strona główna</button></a>';
