@@ -9,14 +9,9 @@
 
     <link rel="stylesheet" href="../css/style.css" class="stylesheet">
 
-    <!-- Font Awesome 6.2 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Importowanie Font Awesome i Google Fonts -->
+    <?php require '../utils/fonts.php' ?>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <script>
@@ -57,14 +52,18 @@
 
                 <input type="submit" class="nav-button" value="Zarejestruj się">
 
-                <?php session_start();
+                <?php
+                    if(!isset($_SESSION)) {
+                        session_start();
+                    }
+
                     if(isset($_SESSION['register-error'])) {
                         echo '<br />' . $_SESSION['register-error'];
                         unset($_SESSION['register-error']);
                     }
                 ?>
 
-                <p>Masz już konto? <a href="login.php">Zaloguj się</a></p>
+                <p>Masz już konto? <a class="link" href="login.php">Zaloguj się</a></p>
             </form>
 
         </div>
