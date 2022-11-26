@@ -57,7 +57,11 @@
 
                 <input type="submit" class="nav-button" value="Zarejestruj się">
 
-                <?php session_start();
+                <?php
+                    if(!isset($_SESSION)) {
+                        session_start();
+                    }
+
                     if(isset($_SESSION['register-error'])) {
                         echo '<br />' . $_SESSION['register-error'];
                         unset($_SESSION['register-error']);

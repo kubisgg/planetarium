@@ -51,7 +51,11 @@
 
                 <input type="submit" class="nav-button" value="Zaloguj się">
 
-                <?php session_start();
+                <?php
+                    if(!isset($_SESSION)) {
+                        session_start();
+                    }
+
                     if(isset($_SESSION['login-error'])) {
                         echo '<br />' . $_SESSION['login-error'];
                         unset($_SESSION['login-error']);
