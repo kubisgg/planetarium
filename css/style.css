@@ -78,16 +78,30 @@ p.info-text {
 }
 
 a:link {
-    color: rgb(143, 194, 212);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 a:visited {
-    color: rgb(143, 194, 212);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 a:hover {
+    color: rgb(255, 255, 255);
+}
+
+a.link:link {
+    color: rgb(143, 194, 212);
+    text-decoration: none;
+}
+
+a.link:visited {
+    color: rgb(143, 194, 212);
+    text-decoration: none;
+}
+
+a.link:hover {
     color: rgb(89, 124, 136);
     text-decoration: underline;
 }

@@ -16,7 +16,19 @@
 <link rel="stylesheet" href="/planetarium/css/header.css" class="stylesheet">
 <header>
 
-    <h1 class="title">Planetarium</h1>
+    <?php
+
+    if($logged_in) {
+
+        echo '<a href="/planetarium/lab/index.php"><h1 class="title">Planetarium</h1></a>';
+
+    } else {
+
+        echo '<a href="/planetarium/index.php"><h1 class="title">Planetarium</h1></a>';
+
+    }
+
+    ?>
 
     <nav>
 

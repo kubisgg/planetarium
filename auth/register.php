@@ -68,7 +68,7 @@
                     }
                 ?>
 
-                <p>Masz już konto? <a href="login.php">Zaloguj się</a></p>
+                <p>Masz już konto? <a class="link" href="login.php">Zaloguj się</a></p>
             </form>
 
         </div>

@@ -62,7 +62,7 @@
                     }
                 ?>
 
-                <p>Nie masz konta? <a href="register.php">Zarejestruj się</a></p>
+                <p>Nie masz konta? <a class="link" href="register.php">Zarejestruj się</a></p>
 
             </form>
 
