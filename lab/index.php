@@ -7,7 +7,7 @@
 
     <title>Planetarium - Lab</title>
 
-    <link rel="stylesheet" href="/planetarium/css/style.css" class="stylesheet">
+    <link rel="stylesheet" href="/planetarium/css/lab_main.css" class="stylesheet">
 
     <!-- Importowanie Font Awesome i Google Fonts -->
     <?php require '../utils/fonts.php' ?>
@@ -19,23 +19,22 @@
 
     <div id="container">
 
-        <div class="quote">
-            <h2>lab</h2>
-            <p style="text-align:end;">~ Napoleon Bonaparte</p>
+        <div class="menu">
+            <a href="#"><button class="menu">Nowe zdjęcie</button><br /></a>
+            <button class="menu">Twoje zdjęcia</button><br />
+            <button class="menu">Galeria</button><br />
         </div>
 
-        <div class="panels">
+        <div class="last-photo">
+            <table>
+                <tr>
+                    <td><h2>Twoje ostatnie zdjęcie</h2></td>
+                </tr>
 
-            <div class="panel-left">
-                <p class="info-text">Ilość ciał niebieskich:</p>
-                <p class="number">0</p>
-            </div>
-
-            <div class="panel-right">
-                <p class="info-text">Nowi użytkownicy:</p>
-                <p class="number">0</p>
-            </div>
-
+                <tr>
+                    <td>asd</td>
+                </tr>
+            </table>
         </div>
 
     </div>

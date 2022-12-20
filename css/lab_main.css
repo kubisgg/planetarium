@@ -1,0 +1,94 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: rgb(37, 37, 37);
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+a.link:link {
+    color: rgb(143, 194, 212);
+    text-decoration: none;
+}
+
+a.link:visited {
+    color: rgb(143, 194, 212);
+    text-decoration: none;
+}
+
+a.link:hover {
+    color: rgb(89, 124, 136);
+    text-decoration: underline;
+}
+
+/* Menu */
+
+div.menu {
+    /* position: absolute; */
+    font-family: 'Fragment Mono', monospace;
+    background-color: white;
+    margin-top: 40px;
+    margin-left: 5%;
+    /* margin-right: 32%; */
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 12px;
+    width: 10%;
+    float: left;
+}
+
+button.menu {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(179, 219, 245);
+    font-size: 25px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Ostatnie zdjecie */
+
+div.last-photo {
+    /* position: absolute; */
+    background-color: white;
+    margin-top: 40px;
+    margin-left: 2%;
+    margin-right: 5%;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 12px;
+    width: 70%;
+    height: 500px;
+    float: left;
+}
+
+table, th, td {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
